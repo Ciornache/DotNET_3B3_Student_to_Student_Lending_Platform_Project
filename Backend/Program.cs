@@ -50,29 +50,4 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/db-check", async (ApplicationContext db) =>
-{
-    var result = new
-    {
-        canConnect = await db.Database.CanConnectAsync(),
-        tables = new List<string>()
-    };
-
-    if (result.canConnect)
-    {
-        var conn = db.Database.GetDbConnection();
-        await conn.OpenAsync();
-        using var cmd = conn.CreateCommand();
-        cmd.CommandText = "SELECT tablename FROM pg_tables WHERE schemaname='public'";
-        using var reader = await cmd.ExecuteReaderAsync();
-        while (await reader.ReadAsync())
-        {
-            result.tables.Add(reader.GetString(0));
-        }
-    }
-
-    return Results.Ok(result);
-});
-
-
-app.Run();
+await app.RunAsync();
