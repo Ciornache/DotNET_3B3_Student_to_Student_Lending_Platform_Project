@@ -1,3 +1,4 @@
+using Backend.Features.Items;
 using Backend.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -30,7 +31,10 @@ builder.Services.AddEndpointsApiExplorer();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseNpgsql(connectionString));
-
+builder.Services.AddScoped<GetItemsHandler>();
+builder.Services.AddScoped<GetItemHandler>();
+builder.Services.AddScoped<PostItemHandler>();
+builder.Services.AddScoped<DeleteItemHandler>();
 var app = builder.Build();
 
 
@@ -50,4 +54,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("/items", async (GetItemsHandler handler) => await handler.Handle());
+app.MapGet("items/{id:guid}", async (Guid id, GetItemHandler handler) => await handler.Handle(new GetItemRequest(id)));
+app.MapPost("items", async (PostItemRequest request, PostItemHandler handler) =>  await handler.Handle(request));
+app.MapDelete("items/{id:guid}", async (Guid id, DeleteItemHandler handler) => await handler.Handle(new DeleteItemRequest(id)));
 await app.RunAsync();

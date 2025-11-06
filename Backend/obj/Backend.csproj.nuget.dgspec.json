@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bianca Milea\\Desktop\\uni\\III\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend\\Backend.csproj": {}
+    "C:\\Users\\Fabian\\Desktop\\ProiectDOTNET\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bianca Milea\\Desktop\\uni\\III\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend\\Backend.csproj": {
+    "C:\\Users\\Fabian\\Desktop\\ProiectDOTNET\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bianca Milea\\Desktop\\uni\\III\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Fabian\\Desktop\\ProiectDOTNET\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\Bianca Milea\\Desktop\\uni\\III\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\Bianca Milea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bianca Milea\\Desktop\\uni\\III\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\Fabian\\Desktop\\ProiectDOTNET\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\Fabian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fabian\\Desktop\\ProiectDOTNET\\DotNET_3B3_Student_to_Student_Lending_Platform_Project\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bianca Milea\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Fabian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,6 +58,12 @@
               "target": "Package",
               "version": "[9.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.4, )"
@@ -84,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Bianca Milea\\.dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Fabian\\.dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
