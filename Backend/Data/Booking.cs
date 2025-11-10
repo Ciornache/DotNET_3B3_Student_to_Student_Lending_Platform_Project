@@ -13,15 +13,15 @@ public class Booking
     public Guid Id { get; set; } = Guid.NewGuid();
 
     /// <summary>
-    /// The item being booked (foreign key to Items.Id).
+    /// The item being booked (foreign key to Item.Id).
     /// </summary>
-    [ForeignKey(nameof(Items))]
+    [ForeignKey(nameof(Item))]
     public Guid ItemId { get; set; }
 
     /// <summary>
-    /// The user borrowing the item (foreign key to Users.Id).
+    /// The user borrowing the item (foreign key to User.Id).
     /// </summary>
-    [ForeignKey(nameof(Users))]
+    [ForeignKey(nameof(User))]
     public Guid BorrowerId { get; set; }
 
     /// <summary>
@@ -63,5 +63,5 @@ public class Booking
     
 
     // Navigation properties (optional)
-    public Items? Item { get; set; }
+    public Item? Item { get; set; }
 }

@@ -60,11 +60,11 @@ public class Review
     // Navigation properties
     public Booking? Booking { get; set; }
 
-    [InverseProperty(nameof(Users.ReviewsWritten))]
-    public Users? Reviewer { get; set; }
+    [InverseProperty(nameof(User.ReviewsWritten))]
+    public User? Reviewer { get; set; }
 
-    [InverseProperty(nameof(Users.ReviewsReceived))]
-    public Users? TargetUser { get; set; }
+    [InverseProperty(nameof(User.ReviewsReceived))]
+    public User? TargetUser { get; set; }
 
-    public Items? TargetItem { get; set; }
+    public Item? TargetItem { get; set; }
 }
