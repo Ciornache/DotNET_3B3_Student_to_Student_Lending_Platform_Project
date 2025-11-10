@@ -1,12 +1,14 @@
 ﻿using Backend.Persistence;
+using Backend.Data;
 
 namespace Backend.Features.Items;
+
 
 public class PostItemHandler(ApplicationContext dbContext)
 {
     public async Task<IResult> Handle(PostItemRequest request)    
     {
-        var item = new Data.Items
+        var item = new Item
         {
             Id = Guid.NewGuid(),
             OwnerId = request.OwnerId,

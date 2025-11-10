@@ -1,3 +1,3 @@
 ﻿namespace Backend.Features.Users;
 
-public record LoginUserRequest();
+public record LoginUserRequest(string Email, string Password);
